@@ -23,6 +23,7 @@ dynamic = ["version"]
 
 
 [tool.scikit-build]
+archs = ["auto64", "auto32"]
 wheel.py-api = "py3"
 wheel.expand-macos-universal-tags = true
 metadata.version.provider = "scikit_build_core.metadata.setuptools_scm"
@@ -41,7 +42,7 @@ environment.PIP_ONLY_BINARY = ":all:"
 
 [tool.cibuildwheel.linux]
 manylinux-x86_64-image = "quay.io/pypa/manylinux2010_x86_64:2022-08-05-4535177"
-manylinux-i686-image = "quay.io/pypa/manylinux2010_x86_64:2022-08-05-4535177"
+manylinux-i686-image = "quay.io/pypa/manylinux2010_i686:2022-08-05-4535177"
 manylinux-aarch64-image = "manylinux2014"
 manylinux-ppc64le-image = "manylinux2014"
 manylinux-s390x-image = "manylinux2014"
